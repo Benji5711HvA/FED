@@ -28,4 +28,34 @@
 /****************/
 
 /* jouw code */
+* {
+	margin: 0;
+	padding: 0;
+}
 
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding-left: 1em;
+	background-color: #181818;
+	height: 3em;
+}
+
+nav img {
+	width: 1.1em;
+	filter: invert();
+}
+
+ul {
+	display: flex;
+}
+
+nav button {
+	border: none;
+	background-color: #181818;
+	padding: 0 1em;
+}
+
+nav button img {
+	width: 1.8em;
+}
