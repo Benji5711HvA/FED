@@ -40,11 +40,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de eerste pagina (small screen): 
   Apple.com homepage
-  <img src="./images/FireShot Capture 002 - Apple (Nederland) - [www.apple.com].png" width="375px" alt="omschrijving van de pagina">
+  <img src="/images/FireShot Capture 002 - Apple (Nederland) - [www.apple.com].png" width="375px" alt="omschrijving van de pagina">
 
   #### Screenshot(s) van de tweede pagina (small screen):
   Apple.com shopping page
-  <img src="./images/FireShot Capture 004 - Apple Store Online - Apple (NL) - [www.apple.com].png" width="375px" alt="omschrijving van de pagina">
+  <img src="/images/FireShot Capture 004 - Apple Store Online - Apple (NL) - [www.apple.com].png" width="375px" alt="omschrijving van de pagina">
  
 </details>
 
