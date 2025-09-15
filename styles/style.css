@@ -59,7 +59,6 @@ nav {
 	padding-left: 1em;
 	background-color: #181818ce;
 	height: 3em;
-	
 }
 
 nav a {
@@ -74,12 +73,8 @@ nav img {
 ul {
 	display: flex;
 	align-items: center;
-}
-
-li {
 	list-style: none;
 }
-
 
 nav button {
 	border: none;
@@ -125,9 +120,10 @@ main section:nth-of-type(2) img {
 	padding: 2em;
 }
 
+
 main section:nth-of-type(2) img:last-child {
 	width: 100%;
-	padding: 4em 4em 0 4em;
+	padding: 1em 4em 0 4em;
 }
 
 main section:nth-of-type(3) img {
@@ -135,13 +131,59 @@ main section:nth-of-type(3) img {
 	padding: 4em 4em 0 4em;
 }
 
-main section:nth-of-type(3), section:nth-of-type(4) {
-background: #D4D6DC;
-background: linear-gradient(180deg, rgba(212, 214, 220, 1) 0%, rgba(255, 255, 255, 1) 60%);
+
+main section:nth-of-type(2) h2 {
+	display: hidden;
 }
 
-main section:nth-of-type(3) p {
+
+
+main section:nth-of-type(4) img {
+	width: 90%;
+	padding: 4em 4em 0 4em;
+}
+
+main section:nth-of-type(5) img {
+	width: 90%;
+	padding: 4em;
+}
+
+main section:nth-of-type(6) img {
+	width: 90%;
+	padding: 4em 4em 0 4em;
+}
+
+main section:nth-of-type(8) img {
+	width: 90%;
+	padding: 4em 4em 0 4em;
+}
+
+main section:last-child img {
+	width: 100%;
+	padding: 4em 4em 0 4em;
+}
+
+main section:nth-of-type(3),
+section:nth-of-type(4),
+section:nth-of-type(5),
+section:nth-of-type(7) {
+	background: #D4D6DC;
+	background: linear-gradient(180deg, rgba(212, 214, 220, 1) 0%, rgba(255, 255, 255, 1) 60%);
+}
+
+main section:nth-of-type(6) {
+	background-color: rgba(0, 0, 0, 0.332);
+}
+
+main section:nth-of-type(3) p,
+section:nth-of-type(4) p,
+section:nth-of-type(5) p,
+section:nth-of-type(7) p {
 	color: #6E6E72;
+}
+
+main section:nth-of-type(6) p {
+	color: white;
 }
 
 main a {
@@ -156,7 +198,10 @@ main a {
 	width: 50%;
 }
 
-main section:nth-of-type(3) a {
+main section:nth-of-type(3) a,
+section:nth-of-type(4) a,
+section:nth-of-type(5) a,
+section:nth-of-type(7) a {
 	border: 1px black solid;
 	color: black;
 }
@@ -168,6 +213,7 @@ main section:nth-of-type(3) a {
 	align-items: center;
 	padding: 2em 0;
 	line-height: 1.5em;
+	width: 75%;
 }
 
 .subtext p {
@@ -175,14 +221,111 @@ main section:nth-of-type(3) a {
 }
 
 h1 {
+	display: hidden;
+}
+
+main section:nth-of-type(3) h2 {
 	color: black;
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 40px;
-	background-image: linear-gradient(180deg, rgb(76, 90,99) 50%, rgb(201, 201, 201) 100%);
-    background-size: 100%;
+	background-image: linear-gradient(180deg, rgb(76, 90, 99) 50%, rgb(201, 201, 201) 100%);
+	background-size: 100%;
 	-webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-    -moz-text-fill-color: transparent;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+main section:nth-of-type(4) h2 {
+	color: black;
+	padding-top: 1.5em;
+	padding-bottom: 0.5em;
+	font-size: 40px;
+	background-image: linear-gradient(90deg, rgba(174, 118, 204, 1) 0%, rgba(116, 137, 206, 1) 50%, rgba(80, 156, 75, 1) 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+}
+
+main section:nth-of-type(5) h2 {
+	color: black;
+	padding-top: 1.5em;
+	padding-bottom: 0.5em;
+	font-size: 40px;
+}
+
+main section:nth-of-type(6) h2 {
+	color: white;
+	padding-top: 1.5em;
+	padding-bottom: 0.5em;
+	font-size: 40px;
+}
+
+main section:nth-of-type(7) h2 {
+	color: black;
+	padding-top: 1.5em;
+	padding-bottom: 0.5em;
+	font-size: 40px;
+}
+
+main section:last-child h2 {
+	color: white;
+	padding-top: 1.5em;
+	padding-bottom: 0.5em;
+	font-size: 40px;
+}
+
+video {
+	width: 100%;
+}
+
+footer {
+	background-color: #1D1D1F;
+	color: #FFFFFF8F;
+}
+
+footer a {
+	display: flex;
+	color: #FFFFFF8F;
+	text-decoration: none;
+	padding: .5em;
+}
+
+footer ul {
+	padding-top: 1em;
+	padding-left: 1em;
+}
+
+footer ul li {
+	font-size: 12px;
+}
+
+footer ul img {
+	width: 2em;
+	padding-left: .2em;
+}
+
+footer ol li {
+	padding: 0 .5em 1em 0;
+	font-size: 12px;
+}
+
+footer ol {
+	padding: 2em;
+}
+
+footer p {
+	line-height: 18px;
+}
+
+footer section>p {
+	padding: .5em 1em;
+	font-size: 12px;
+}
+
+main section ul {
+	padding-bottom: 2em;
 }
