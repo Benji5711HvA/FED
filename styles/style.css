@@ -148,11 +148,6 @@ main section:nth-of-type(5) img {
 	padding: 4em;
 }
 
-main section:nth-of-type(6) img {
-	width: 90%;
-	padding: 4em 4em 0 4em;
-}
-
 main section:nth-of-type(8) img {
 	width: 90%;
 	padding: 4em 4em 0 4em;
@@ -173,7 +168,10 @@ section:nth-of-type(7) {
 
 main section:nth-of-type(6) {
 	background-color: rgba(0, 0, 0, 0.332);
+	position: relative;
 }
+
+main section:nth-last-of-type()
 
 main section:nth-of-type(3) p,
 section:nth-of-type(4) p,
