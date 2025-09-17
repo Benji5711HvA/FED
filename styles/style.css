@@ -45,10 +45,16 @@
 	padding: 0;
 }
 
+body {
+	background-color: black;
+}
+
+
+
 header {
 	background: transparent;
 	backdrop-filter: blur(10px);
-	position: fixed;
+	position: sticky;
 	top: 0px;
 	width: 100%;
 }
@@ -70,6 +76,8 @@ nav img {
 	filter: invert();
 }
 
+
+
 ul {
 	display: flex;
 	align-items: center;
@@ -86,6 +94,8 @@ nav button img {
 	width: 1.8em;
 }
 
+
+
 main section {
 	display: flex;
 	justify-content: start;
@@ -94,9 +104,11 @@ main section {
 	align-items: center;
 }
 
-main section:first-child {
+.home main section:first-child {
 	height: 55em;
 }
+
+
 
 main section p {
 	color: rgba(255, 255, 255, 0.5);
@@ -106,7 +118,9 @@ main section p {
 	font-weight: 900;
 }
 
-main section:first-child p {
+
+
+.home main section:first-child p {
 	padding: 1em 0;
 }
 
@@ -128,7 +142,7 @@ main section:nth-of-type(2) img:last-child {
 
 main section:nth-of-type(3) img {
 	width: 90%;
-	padding: 4em 4em 0 4em;
+	
 }
 
 
@@ -336,3 +350,59 @@ footer section>p {
 main section ul {
 	padding-bottom: 2em;
 }
+
+/* #region ---STORE--- styling */
+
+.store {
+	background-color: #F5F5F7;
+}
+.store nav {
+	background-color: #F5F5F7;
+}
+.store nav img {
+	width: 1.1em;
+	filter: none;
+	filter: opacity(65%);
+}
+.store nav button img {
+	width: 1.8em;
+}
+.store main section {
+	background-color: #F5F5F7;
+}
+.store main section:first-child {
+	background-color: white;
+	padding: 1em;
+}
+.store main section p {
+	color: black;
+	font-size: 15px;
+}
+.store main section h1 {
+	padding: 2em .7em;
+	line-height: 38px;
+	color: rgb(110, 110, 110);
+}
+.store main section p {
+	width: 90%;
+	color: rgb(80, 80, 80);
+	line-height: 20px;
+}
+.store main section:nth-of-type(3) {
+	display: flex;
+}
+
+.store main section:nth-of-type(3) img {
+	width: 11em;
+}
+
+.store main section:nth-of-type(3),
+section:nth-of-type(4),
+section:nth-of-type(5),
+section:nth-of-type(7) {
+	background: #F5F5F7;
+}
+
+
+
+/* #endregion */
