@@ -17,11 +17,6 @@
 	box-sizing: border-box;
 }
 
-
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
@@ -49,12 +44,11 @@ body {
 	background-color: black;
 }
 
-
-
 header {
 	background: transparent;
 	backdrop-filter: blur(10px);
 	position: sticky;
+	z-index: 1;
 	top: 0px;
 	width: 100%;
 }
@@ -76,12 +70,11 @@ nav img {
 	filter: invert();
 }
 
-
-
 ul {
 	display: flex;
 	align-items: center;
 	list-style: none;
+	gap: 0.8em;
 }
 
 nav button {
@@ -95,7 +88,6 @@ nav button img {
 }
 
 
-
 main section {
 	display: flex;
 	justify-content: start;
@@ -104,7 +96,7 @@ main section {
 	align-items: center;
 }
 
-.home main section:first-child {
+main section:first-child {
 	height: 55em;
 }
 
@@ -120,7 +112,7 @@ main section p {
 
 
 
-.home main section:first-child p {
+main section:first-child p {
 	padding: 1em 0;
 }
 
@@ -142,7 +134,7 @@ main section:nth-of-type(2) img:last-child {
 
 main section:nth-of-type(3) img {
 	width: 90%;
-	
+	padding: 4em 4em 0 4em;
 }
 
 
@@ -219,7 +211,7 @@ main a {
 	width: 50%;
 }
 
-main section:nth-of-type(3) a,
+.home main section:nth-of-type(3) a,
 section:nth-of-type(4) a,
 section:nth-of-type(5) a,
 section:nth-of-type(7) a {
@@ -258,7 +250,7 @@ main section:nth-of-type(3) h2 {
 	-moz-text-fill-color: transparent;
 }
 
-main section:nth-of-type(4) h2 {
+.home main section:nth-of-type(4) h2 {
 	color: black;
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
@@ -351,13 +343,26 @@ main section ul {
 	padding-bottom: 2em;
 }
 
+
+
+
+
 /* #region ---STORE--- styling */
 
 .store {
 	background-color: #F5F5F7;
 }
+
+.store main section {
+    background: #F5F5F7;
+}
+
+.store main section span {
+	color: rgb(0, 0, 0);
+}
+
 .store nav {
-	background-color: #F5F5F7;
+	background-color: #f5f5f7ce;
 }
 .store nav img {
 	width: 1.1em;
@@ -367,42 +372,203 @@ main section ul {
 .store nav button img {
 	width: 1.8em;
 }
-.store main section {
-	background-color: #F5F5F7;
-}
-.store main section:first-child {
+
+.store .top-banner {
 	background-color: white;
+	height: 5em;
+	display: flex;
+	justify-content: center;
 	padding: 1em;
 }
-.store main section p {
-	color: black;
+
+.store .top-banner p {
+	color: rgb(80, 80, 80);
 	font-size: 15px;
+	width: 90%;
+	line-height: 20px;
 }
+
+
 .store main section h1 {
-	padding: 2em .7em;
+	padding: 1.8em .7em 0.5em;
 	line-height: 38px;
 	color: rgb(110, 110, 110);
 }
-.store main section p {
-	width: 90%;
-	color: rgb(80, 80, 80);
-	line-height: 20px;
-}
-.store main section:nth-of-type(3) {
+
+.store .store-intro {
 	display: flex;
+	justify-content: start;
 }
 
-.store main section:nth-of-type(3) img {
-	width: 11em;
+.store .store-help, .apple-store {
+	display: flex;
+	justify-content: start;
+	width: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 1em;
+	padding: 0.5em 1.5em;
 }
 
-.store main section:nth-of-type(3),
-section:nth-of-type(4),
-section:nth-of-type(5),
-section:nth-of-type(7) {
-	background: #F5F5F7;
+.store .store-help img {
+	width: 2.2em;
+	padding: 0;
+}
+
+.store .apple-store svg {
+	width: 2.2em;
+}
+
+.store .store-intro h2 {
+	font-size: 0.9em;
+	color: black;
+	padding: 0;
+}
+
+.store a {
+	border: none;
+	color: #0066cc;
+	font-size: 0.9em;
+	padding: 0;
+}
+
+.store .carousel-small {
+	display: flex;
+	overflow-x: auto;
+	overflow-y: hidden;
+}
+
+.store .carousel-small::-webkit-scrollbar {
+	display: none;
+}
+
+.store .carousel-small img {
+	padding: 0;
+	width: 6.5em;
+}
+
+.store .carousel-small ul {
+	width: 100%;
+	padding: 1.6em;
+	margin-top: 1.2em;
+}
+
+.store .carousel-small li {
+	text-align: center;
+}
+
+.store .carousel-small span {
+	font-weight: 900;
+}
+
+.store .carousel-large>h2 {
+	padding: 1.4em 1em 0.5em;
+	color: rgb(110, 110, 110);
+	font-size: 1.6em;
+}
+
+.store .carousel-large article {
+	position: relative;
+	width: 20em;
+	height: 29em;
+	padding: 1em 1.8em;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+	border-radius: 18px;
+}
+
+.store .carousel-large article img:first-of-type {
+	position: absolute;
+	border-radius: 18px;
+	top: 0;
+	left: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 
+.store .carousel-large:nth-of-type(5) ul li article {
+	background-color: white;
+}
+
+.store .carousel-large:nth-of-type(5) article img:first-of-type {
+	position: static;
+	padding: 3em 2em 0;
+}
+
+.store .carousel-large:nth-of-type(5) article img:last-of-type {
+	position: relative;
+	width: 100%;
+}
+
+.store .carousel-large article img:last-of-type {
+	position: absolute;
+}
+
+.store .carousel-large:nth-of-type(5) ul li:first-of-type article img:first-of-type {
+	position: absolute;
+	padding: 0;
+}
+
+.store .carousel-large li article h2,
+.store .carousel-large li article h3,
+.store .carousel-large li article p {
+  color: black;
+  text-align: start;
+  position: relative;
+  width: 13em;
+}
+
+.store .carousel-large:nth-of-type(5) li article p {
+	position: absolute;
+	bottom: 2em;
+}
+
+.store section:nth-of-type(4) li:nth-of-type(1) article h2,
+.store section:nth-of-type(4) li:nth-of-type(1) article h3,
+.store section:nth-of-type(4) li:nth-of-type(1) article p,
+.store section:nth-of-type(4) li:nth-of-type(6) article h2,
+.store section:nth-of-type(4) li:nth-of-type(6) article h3,
+.store section:nth-of-type(4) li:nth-of-type(6) article p {
+  color: white;
+}
+
+.store .carousel-large article h2 {
+	font-size: 1.4em;
+	padding: 1.5em 0 0;
+}
+
+.store .carousel-large h3 {
+	font-size: 1.1em;
+	padding: .3em 0;
+}
+
+.store .carousel-large p {
+	font-size: .9em;
+}
+
+.store .carousel-large img {
+	width: 2em;
+	padding: .5em 0;
+}
+
+.store .carousel-large ul {
+	display: flex;
+	width: 100%;
+	gap: 1.2em;
+  	overflow-x: auto;
+  	overflow-y: hidden;
+	padding: 1.4em;
+}
+
+.store .carousel-large ul::-webkit-scrollbar {
+	display: none;
+}
+
+.store .carousel-large:nth-of-type(6) {
+	position: static;
+}
 
 /* #endregion */
