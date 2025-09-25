@@ -1,12 +1,19 @@
-@font-face {
+/* @font-face {
 	font-family: "San Francisco";
 	font-weight: 400;
 	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-}
+} */
+
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 * {
-	font-family: "San Francisco", sans-serif;
+	font-family: 'SF Pro Display', sans-serif;
+	font-weight: 400;
 }
+
+/* * {
+	font-family: "San Francisco", sans-serif;
+} */
 
 /**************/
 /* CSS REMEDY */
@@ -383,6 +390,7 @@ main section ul {
 	font-size: 15px;
 	width: 90%;
 	line-height: 20px;
+	font-weight: 200;
 }
 
 
@@ -423,6 +431,11 @@ main section ul {
 	padding: 0;
 }
 
+.store .store-intro h1,
+.store .store-intro span {
+	font-weight: 500;
+}
+
 .store a {
 	border: none;
 	color: #0066cc;
@@ -453,10 +466,6 @@ main section ul {
 
 .store .carousel-small li {
 	text-align: center;
-}
-
-.store .carousel-small span {
-	font-weight: 900;
 }
 
 .store .carousel-large>h2 {
@@ -518,6 +527,18 @@ main section ul {
   width: 12.9em;
 }
 
+.store .carousel-large li article p {
+	font-weight: 200;
+}
+
+.store .carousel-large:nth-of-type(6) li article h3 {
+	width: 11.5em;
+}
+
+.store .carousel-large:nth-of-type(6) li article p:first-of-type {
+	width: 15em;
+}
+
 .store .carousel-large:nth-of-type(5) li article p {
 	position: absolute;
 	bottom: 2em;
@@ -572,14 +593,75 @@ main section ul {
 	padding: .4em 0 .1em;
 }
 
-.store .carousel-large:nth-of-type(6) ul li:nth-of-type(2) article p:last-child {
+.store .carousel-large:nth-of-type(6) ul li article p:last-child {
 	font-size: 1.1em;
 	padding: 0;
-	width: 100%;
+	font-weight: 100;
 }
 
 .store .carousel-large:nth-of-type(6) h3 {
 	font-size: 1.4em;
+}
+
+.store .carousel-large:nth-of-type(6) ul li:last-of-type h3 {
+	padding-top: 1.5em;
+}
+
+.store .carousel-large:nth-of-type(7) article {
+	height: 14em;
+	padding: 1.3em 1.6em;
+	background-color: white;
+}
+
+.store .carousel-large:nth-of-type(7) article h2 {
+	width: 10em;
+	padding: 0;
+}
+
+.store .carousel-large:nth-of-type(7) ul li:first-of-type article span,
+.store .carousel-large:nth-of-type(7) ul li:first-of-type article svg {
+	color: #007AFF;
+	fill: #007AFF;
+}
+
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(2) article span,
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(2) article svg {
+	color: #AC39FF;
+	fill: #AC39FF;
+}
+
+.store .carousel-large:nth-of-type(7) ul li article h2 {
+	width: 11.5em;
+}
+
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(3) article svg {
+	color: #00800A;
+	fill: #00800A;
+}
+
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(4) article span,
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(4) article svg {
+	color: #00800A;
+	fill: #00800A;
+}
+
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(4) article span,
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(4) article svg {
+	color: #3F6EB8;
+	fill: #3F6EB8;
+}
+
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(5) article svg {
+	width: 2em;
+}
+
+.store .carousel-large:nth-of-type(7) ul li:nth-of-type(5) article span {
+	background: -webkit-linear-gradient(0deg,rgba(245, 140, 95, 1) 0%, rgba(159, 119, 202, 1) 50%, rgba(108, 210, 159, 1) 100%);
+	background-size: 100%;
+	-webkit-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
 }
 
 /* #endregion */
