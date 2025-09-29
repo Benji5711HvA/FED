@@ -1,19 +1,9 @@
-/* @font-face {
-	font-family: "San Francisco";
-	font-weight: 400;
-	src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
-} */
-
 @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
 * {
 	font-family: 'SF Pro Display', sans-serif;
 	font-weight: 500;
 }
-
-/* * {
-	font-family: "San Francisco", sans-serif;
-} */
 
 /**************/
 /* CSS REMEDY */
@@ -28,13 +18,30 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text: #111;
-	--color-background: #eee;
+	/* basis */
+	--color-black: #000000;
+	--color-white: #ffffff;
+	--color-gray-light: #f5f5f7;
+	--color-gray-dark: #1d1d1f;
+	--color-header-bg: #181818;
+
+	/* transparanten en overlays */
+	--color-overlay-dark: #181818ce;
+	--color-white-alpha: rgba(255, 255, 255, 0.5);
+	--color-white-alpha-strong: rgba(255, 255, 255, 0.897);
+
+	/* gradients */
+	--gradient-gray: linear-gradient(180deg, #d5d6dc 0%, #ffffff 60%);
+	--gradient-black-fade: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #000 100%);
+	--gradient-h2-3: linear-gradient(180deg, rgb(76, 90, 99) 50%, rgb(201, 201, 201) 100%);
+	--gradient-h2-4: linear-gradient(90deg, rgba(174, 118, 204, 1) 0%, rgba(116, 137, 206, 1) 50%, rgba(80, 156, 75, 1) 100%);
+	--gradient-span-7-5: -webkit-linear-gradient(0deg, rgba(245, 140, 95, 1) 0%, rgba(159, 119, 202, 1) 50%, rgba(108, 210, 159, 1) 100%);
+
+	/* store specifieke kleuren */
+	--color-link-blue: #0066cc;
+	--color-store-text: rgb(80, 80, 80);
+	--color-footer-gray: rgb(151, 151, 151);
 }
-
-
-
 
 
 /****************/
@@ -48,7 +55,7 @@
 }
 
 body {
-	background-color: black;
+	background-color: var(--color-black);
 }
 
 header {
@@ -60,22 +67,137 @@ header {
 	width: 100%;
 }
 
-nav {
+
+header section {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	background-color: var(--color-header-bg);
+	z-index: 1;
+	transform: translateY(-100%);
+	transition: transform 0.4s ease;
+	padding: 4em 3em;
+}
+
+header section.open {
+	transform: translateY(0);
+}
+
+header section:first-of-type {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 4em 3em;
+	gap: 1.5em;
+}
+
+header section:nth-of-type(2) {
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: column;
+	padding: 4em 3em;
+	gap: 1.5em;
+}
+
+header section:nth-of-type(2) h2 {
+	font-size: 1.8em;
+	color: var(--color-white);
+}
+
+header section:nth-of-type(2) p {
+	color: var(--color-white);
+}
+
+header section:nth-of-type(2) p a {
+	color: var(--color-link-blue);
+}
+
+header section div {
+	display: flex;
+	height: 2em;
+	gap: .5em;
+}
+
+header section:first-of-type div:first-of-type img {
+	filter: invert(50%);
+	width: 4em;
+}
+
+header section:first-of-type input {
+	background-color: var(--color-header-bg);
+	border: none;
+	font-size: 1.8em;
+	color: var(--color-white);
+}
+
+header section:first-of-type input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+header section h3 {
+	color: var(--color-white);
+	font-size: 1em;
+	margin-top: 1em;
+	font-weight: 100;
+}
+
+header section:first-of-type h2 {
+	display: none;
+}
+
+header section:last-of-type h2 {
+	display: none;
+}
+
+
+header section ul {
+	display: flex;
+	align-items: start;
+	justify-content: start;
+	flex-direction: column;
+}
+
+
+header section ul li {
+	display: flex;
+	gap: .5em;
+	padding: .1em;
+	font-size: 1.6em;
+}
+
+header section ul li svg {
+	filter: invert();
+}
+
+header section:first-of-type ul li,
+header section:nth-of-type(2) ul li {
+	font-size: 1.1em;
+}
+
+header section ul li a {
+	text-decoration: none;
+	color: var(--color-white);
+}
+
+
+header nav {
 	display: flex;
 	justify-content: space-between;
 	padding-left: 1em;
-	background-color: #181818ce;
+	background-color: var(--color-overlay-dark);
 	height: 3em;
 }
 
-nav a {
+header nav a {
 	display: flex;
 }
 
-nav img {
+header nav img {
 	width: 1.1em;
 	filter: invert();
 }
+
 
 ul {
 	display: flex;
@@ -84,33 +206,42 @@ ul {
 	gap: 0.8em;
 }
 
-nav button {
+header nav ul {
+	gap: 0.2em;
+}
+
+header nav ul li:last-child {
+	position: relative;
+	z-index: 1;
+}
+
+header nav button {
 	border: none;
 	background: transparent;
 	padding: 0 1em;
 }
 
-nav button img {
+header nav button img {
 	width: 1.8em;
 }
+
 
 
 main section {
 	display: flex;
 	justify-content: start;
 	flex-direction: column;
-	background-color: black;
+	background-color: var(--color-black);
 	align-items: center;
 }
 
 main section:first-child {
 	height: 55em;
+	padding-top: 2em
 }
 
-
-
 main section p {
-	color: rgba(255, 255, 255, 0.5);
+	color: var(--color-white-alpha);
 	font-size: 20px;
 	width: 79%;
 	text-align: center;
@@ -119,11 +250,12 @@ main section p {
 
 
 main section:first-child p {
-	padding: 1em 0;
+	padding-bottom: 1em;
+	width: 70%;
 }
 
-main section:first-child img {
-	width: 95%;
+main section:first-child video {
+	width: 75%;
 }
 
 main section:nth-of-type(2) img {
@@ -173,12 +305,12 @@ main section:nth-of-type(3),
 section:nth-of-type(4),
 section:nth-of-type(5),
 section:nth-of-type(7) {
-	background: #D4D6DC;
+	background: var(--gradient-gray);
 	background: linear-gradient(180deg, #D5D6DC 0%, rgba(255, 255, 255, 1) 60%);
 }
 
 main section:nth-of-type(6) {
-	background-color: rgba(0, 0, 0, 0.332);
+	background: var(--gradient-black-fade);
 	position: relative;
 	z-index: -1;
 }
@@ -201,17 +333,17 @@ section:nth-of-type(7) p {
 }
 
 main section:nth-of-type(6) p {
-	color: white;
+	color: var(--color-white);
 }
 
 main a {
-	border: 1px white solid;
+	border: 1px var(--color-white) solid;
 	border-radius: 50px;
 	padding: 0.5em;
 	font-size: 17px;
 	text-decoration: none;
 	line-height: 22px;
-	color: rgba(255, 255, 255, 0.897);
+	color: var(--color-white-alpha-strong);
 	text-align: center;
 	width: 50%;
 	font-weight: 400;
@@ -221,8 +353,8 @@ main a {
 section:nth-of-type(4) a,
 section:nth-of-type(5) a,
 section:nth-of-type(7) a {
-	border: 1px black solid;
-	color: black;
+	border: 1px var(--color-black) solid;
+	color: var(--color-black);
 	padding: .6em 1.4em;
 }
 
@@ -242,15 +374,19 @@ section:nth-of-type(7) a {
 }
 
 h1 {
-	display: hidden;
+	display: none;
+}
+
+main section:first-of-type h2 {
+	display: none;
 }
 
 main section:nth-of-type(3) h2 {
-	color: black;
+	color: var(--color-black);
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 40px;
-	background-image: linear-gradient(180deg, rgb(76, 90, 99) 50%, rgb(201, 201, 201) 100%);
+	background-image: var(--gradient-h2-3);
 	background-size: 100%;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -259,11 +395,11 @@ main section:nth-of-type(3) h2 {
 }
 
 .home main section:nth-of-type(4) h2 {
-	color: black;
+	color: var(--color-black);
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 40px;
-	background-image: linear-gradient(90deg, rgba(174, 118, 204, 1) 0%, rgba(116, 137, 206, 1) 50%, rgba(80, 156, 75, 1) 100%);
+	background-image: var(--gradient-h2-4);
 	background-size: 100%;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -272,28 +408,28 @@ main section:nth-of-type(3) h2 {
 }
 
 main section:nth-of-type(5) h2 {
-	color: black;
+	color: var(--color-black);
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 40px;
 }
 
 main section:nth-of-type(6) h2 {
-	color: white;
+	color: var(--color-white);
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 40px;
 }
 
 main section:nth-of-type(7) h2 {
-	color: black;
+	color: var(--color-black);
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 40px;
 }
 
 main section:last-child h2 {
-	color: white;
+	color: var(--color-white);
 	padding-top: 1.5em;
 	padding-bottom: 0.5em;
 	font-size: 40px;
@@ -304,8 +440,8 @@ video {
 }
 
 footer {
-	background-color: #1D1D1F;
-	color: #FFFFFF8F;
+	background-color: var(--color-gray-dark);
+	color: var(--color-white-alpha);
 }
 
 footer a {
@@ -347,53 +483,54 @@ footer section>p {
 	font-size: .8em;
 }
 
-footer .footer-accordion {
-	border-top: 1px solid;
+footer nav {
+	border-top: .1px solid;
 	padding-top: 1em;
 	margin: 1.5em;
 }
 
-footer .footer-accordion details  {
+footer nav details {
 	padding-bottom: 1em;
-	margin: 1em 0;
-	border: .1px white solid;
+	margin: .8em 0;
+	border: .1px var(--color-white) solid;
 	border-top: none;
 	border-left: none;
 	border-right: none;
 }
 
-footer .footer-accordion details ul {
+footer nav details ul {
 	display: flex;
 	align-items: start;
 	flex-direction: column;
 }
 
-footer .footer-accordion details ul li a {
+footer nav details ul li a {
 	padding: 0;
 }
 
-footer .footer-accordion summary {
-  list-style: none;
-  position: relative;
-  cursor: pointer;
-  padding-right: 1.2em;
+footer nav summary {
+	list-style: none;
+	position: relative;
+	cursor: pointer;
+	padding-right: 1.2em;
+	font-size: .9em;
 }
 
-footer .footer-accordion summary::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 0.5em;
-  height: 0.5em;
-  border-right: 2px solid currentColor;
-  border-bottom: 2px solid currentColor;
-  transform: translateY(-50%) rotate(45deg);
-  transition: transform 0.2s ease;
+footer nav summary::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0.5em;
+	height: 0.5em;
+	border-right: 2px solid currentColor;
+	border-bottom: 2px solid currentColor;
+	transform: translateY(-50%) rotate(45deg);
+	transition: transform 0.2s ease;
 }
 
-footer .footer-accordion details[open] summary::after {
-  transform: translateY(-50%) rotate(-135deg);
+footer nav details[open] summary::after {
+	transform: translateY(-50%) rotate(-135deg);
 }
 
 main section ul {
@@ -404,11 +541,52 @@ main section ul {
 /* #region ---STORE--- styling */
 
 .store {
-	background-color: #F5F5F7;
+	background-color: var(--color-gray-light);
+}
+
+.store header section {
+	background-color: var(--color-gray-light);
+}
+
+.store header section h2 {
+	color: var(--color-black);
+}
+
+.store header section p {
+	color: var(--color-black);
+	font-weight: 100;
+}
+
+.store header section:nth-of-type(2) p a {
+	color: var(--color-link-blue);
+}
+
+.store header section h3 {
+	color: var(--color-header-bg);
+}
+
+.store header section:nth-of-type(2) ul li {
+	display: flex;
+	align-items: center;
+}
+
+.store header section ul li a {
+	color: var(--color-black);
+	font-size: 1.1em;
+}
+
+.store header section:nth-of-type(2) svg {
+	filter: invert(0);
+}
+
+.store header section input {
+	background-color: var(--color-gray-light);
+	color: var(--color-black);
 }
 
 .store main section {
-    background: #F5F5F7;
+	background: #F5F5F7;
+	padding-top: 0;
 }
 
 .store main section span {
@@ -418,17 +596,19 @@ main section ul {
 .store nav {
 	background-color: #f5f5f7ce;
 }
+
 .store nav img {
 	width: 1.1em;
 	filter: none;
 	filter: opacity(65%);
 }
+
 .store nav button img {
 	width: 1.8em;
 }
 
 .store .top-banner {
-	background-color: white;
+	background-color: var(--color-white);
 	height: 5em;
 	display: flex;
 	justify-content: center;
@@ -436,11 +616,12 @@ main section ul {
 }
 
 .store .top-banner p {
-	color: rgb(80, 80, 80);
+	color: var(--color-store-text);
 	font-size: 15px;
 	width: 90%;
 	line-height: 20px;
 	font-weight: 200;
+	padding-bottom: 0;
 }
 
 
@@ -448,6 +629,7 @@ main section ul {
 	padding: 1.8em .7em 0.5em;
 	line-height: 38px;
 	color: rgb(110, 110, 110);
+	display: block;
 }
 
 .store .store-intro {
@@ -455,7 +637,8 @@ main section ul {
 	justify-content: start;
 }
 
-.store .store-help, .apple-store {
+.store .store-help,
+.apple-store {
 	display: flex;
 	justify-content: start;
 	width: 100%;
@@ -476,8 +659,9 @@ main section ul {
 }
 
 .store .store-intro h2 {
+	display: block;
 	font-size: 0.9em;
-	color: black;
+	color: var(--color-black);
 	padding: 0;
 }
 
@@ -488,7 +672,7 @@ main section ul {
 
 .store a {
 	border: none;
-	color: #0066cc;
+	color: var(--color-link-blue);
 	font-size: 0.9em;
 	padding: 0;
 	font-weight: 400;
@@ -517,6 +701,10 @@ main section ul {
 
 .store .carousel-small li {
 	text-align: center;
+}
+
+.store .carousel-small h2 {
+	display: none;
 }
 
 .store .carousel-large>h2 {
@@ -548,7 +736,7 @@ main section ul {
 
 .store .carousel-large:nth-of-type(5) ul li article,
 .carousel-large:nth-of-type(8) ul li article {
-	background-color: white;
+	background-color: var(--color-white);
 }
 
 .store .carousel-large:nth-of-type(5) article img:first-of-type,
@@ -577,10 +765,10 @@ main section ul {
 .store .carousel-large li article h2,
 .store .carousel-large li article h3,
 .store .carousel-large li article p {
-  color: black;
-  text-align: start;
-  position: relative;
-  width: 12.9em;
+	color: var(--color-black);
+	text-align: start;
+	position: relative;
+	width: 12.9em;
 }
 
 .store .carousel-large li article p {
@@ -611,7 +799,7 @@ main section ul {
 .store section:nth-of-type(4) li:nth-of-type(6) article h2,
 .store section:nth-of-type(4) li:nth-of-type(6) article h3,
 .store section:nth-of-type(4) li:nth-of-type(6) article p {
-  color: white;
+	color: var(--color-white);
 }
 
 .store .carousel-large article h2 {
@@ -636,14 +824,15 @@ main section ul {
 .store .carousel-large img {
 	width: 2em;
 	padding: .5em 0;
+	position: relative;
 }
 
 .store .carousel-large ul {
 	display: flex;
 	width: 100%;
 	gap: 1.2em;
-  	overflow-x: auto;
-  	overflow-y: hidden;
+	overflow-x: auto;
+	overflow-y: hidden;
 	padding: 1.4em;
 }
 
@@ -683,7 +872,7 @@ main section ul {
 .store .carousel-large:nth-of-type(9) ul li:nth-of-type(2) h3,
 .carousel-large:nth-of-type(9) ul li:nth-of-type(2) p,
 .carousel-large:nth-of-type(10) ul li:nth-of-type(3) h3 {
-	color: white;
+	color: var(--color-white);
 }
 
 .store .carousel-large:nth-of-type(10) ul li:nth-of-type(3) p {
@@ -699,7 +888,7 @@ main section ul {
 .store .carousel-large:nth-of-type(7) article {
 	height: 14em;
 	padding: 1.3em 1.6em;
-	background-color: white;
+	background-color: var(--color-white);
 }
 
 .store .carousel-large:nth-of-type(7) article h2 {
@@ -745,7 +934,7 @@ main section ul {
 }
 
 .store .carousel-large:nth-of-type(7) ul li:nth-of-type(5) article span {
-	background: -webkit-linear-gradient(0deg,rgba(245, 140, 95, 1) 0%, rgba(159, 119, 202, 1) 50%, rgba(108, 210, 159, 1) 100%);
+	background: -webkit-linear-gradient(0deg, rgba(245, 140, 95, 1) 0%, rgba(159, 119, 202, 1) 50%, rgba(108, 210, 159, 1) 100%);
 	background-size: 100%;
 	-webkit-background-clip: text;
 	-moz-background-clip: text;
@@ -754,13 +943,35 @@ main section ul {
 }
 
 .store footer {
-	background-color: #F5F5F7;
-	color: rgb(151, 151, 151);
+	background-color: var(--color-gray-light);
+	color: var(--color-footer-gray);
+}
+
+.store footer section>h2 {
+	display: none;
 }
 
 .store footer ol {
 	list-style: none;
 	padding: 1.4em;
+}
+
+.store footer details summary {
+	font-size: .9em;
+}
+
+.store footer details {
+	padding-bottom: 1em;
+	margin: 1em 0;
+	border: .1px rgb(151, 151, 151) solid;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+}
+
+.store footer details a {
+	color: rgb(151, 151, 151);
+	font-size: 1em;
 }
 
 /* #endregion */
