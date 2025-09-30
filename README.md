@@ -206,15 +206,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  Bij dit vak heb ik meer geleerd hoe ik de pseudo selectoren goed kan gebruiken. Daarnaast heb ik ook geleerd dat je custom properties kan gebruiken zodat je geen herhalende values hebt. ik vond het ook best mooi om te zien dat html/css zodanig is ontwikkeld dat je best veel animaties kan toepassen zonder js, zoals de animation-timeline.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
+  <img src="readme-images/Screenshot_2025-09-30 14.11.16_5ljWL4.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  Het meerendeel is gelukkig gelukt. soms liep ik heel erg vast en wou ik het laten voor wat het is, maar ik heb niet opgegeven. vooral dat stukje met js dat als je een menu opent dat de hamburgericoon in een x verandert was best ingewikkeld. het probleem was meer dat als je een ander menu opende (bv. zoek of winkelwagen), en op het kruisje klikte, je dan ineens weer de hoofdmenu te zien kreeg. en dat was natuurlijk niet de bedoeling. dus moest ik het zo voorelkaar krijgen dat alle menus sloten nadat er op het kruisje werd geklikt. Daarnaast vond ik het beetje irritant om constant met pseudo selectoren te werken. dit was ik namelijk nooit gewend om te doen. Voor de storepage was ik wel genoodzaakt om classes te gebruiken, zodat ik speciek de store elementen kon aanroepen. ik vond het ook beetje lastig om de images in een carousel card als achtergrond in te stellen. daarvoor moest ik degelijk experimenteren met de positions.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/Screenshot_2025-09-30 14.21.12_dZTFkV.png" width="375px" alt="bummer">
+  <img src="readme-images/Screenshot_2025-09-30 14.22.42_pc2yRf.png" width="375px" alt="bummer">
 </details>
 
 
