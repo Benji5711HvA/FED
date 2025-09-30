@@ -13,9 +13,15 @@ buttons.forEach((button, index) => {
   button.addEventListener("click", () => {
     let section = sections[index];
     let isOpen = section.classList.contains("open");
-
+    let somethingOpen = false;
+    
     // check of er nu iets open is
-    let somethingOpen = [...sections].some(s => s.classList.contains("open"));
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].classList.contains("open")) {
+        somethingOpen = true;
+        break;
+      }
+    }
 
     // alles sluiten
     sections.forEach(s => {
