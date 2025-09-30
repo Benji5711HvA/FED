@@ -88,7 +88,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  In de eerste week had ik gelijk al een nette basis gemaakt. ik had begon met html en daarop paste ik ook direct css toe. ik vond deze werkwijze fijner omdat ik gelijk kon zien wat ik heb en hoe het eruit ziet. pas als ik tevreden was, ging ik verder naar de volgende onderdeel.
 
 
   ### Agenda voor meeting
@@ -121,7 +121,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  In week 2 was ik stukken verder en had ik meer vooruitgang geboekt. ik had al een groot deel van de homepage af. de sections stijlen met pseudo selector vond ik soms ingewikkeld, omdat ik steeds moest tellen om erachter te komen welke section ik moest aanroepen in css. maar gelukkig had jason me een tip gegeven dat ik dat heel makkelijk via inspect element kon achterhalen. dat scheelde me veel zoekwerk.
 
 
   ### Agenda voor meeting
@@ -168,7 +168,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  In de derde week ging ik de store page maken. dit was iets ingewikkelder dan de homepage omdat ik best veel carousels moest maken met elk een ander stijl. maar dat ging best goed nadat ik paar had gemaakt.
 
 
   ### Agenda voor meeting
@@ -201,7 +201,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor eindgesprek</summary>
 
   ### Je uitkomst - karakteristiek screenshots:
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Eindresultaat-homepage.png" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/Eindresultaat-storepage.png" width="375px" alt="uitomst opdracht 1">
 
 
   ### Dit ging goed/Heb ik geleerd: 
@@ -229,8 +230,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
+  1. bron 1(https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+  2. bron 2(https://css-tricks.com/almanac/properties/a/animation-timeline/)
   3. ...
 
 </details>
