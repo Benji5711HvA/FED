@@ -51,3 +51,14 @@ buttons.forEach((button, index) => {
     }
   });
 });
+
+// ecc sluit open section
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    sections.forEach(s => {
+      s.classList.remove("open");
+      s.setAttribute("aria-hidden", "true");
+    });
+    menuIcon.src = hamburgerIcon;
+  }
+});
