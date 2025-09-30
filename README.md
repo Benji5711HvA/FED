@@ -56,7 +56,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Bij de test merkte ik wel dat veel images geen alt-tekst hadden. daardoor was het niet duidelijk wat er was geselecteerd. de headings werden wel correct voorgelezen. ik heb direct een goeie semantische basis opgezet zodat het goed zou werken met screenreaders/voiceovers. 
 
 </details>
 
@@ -154,7 +154,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Bij deze test kwam ik erachter dat ik de content binnen de menus moest uitzetten voor de screenreaders, en dat het alleen werd voorgelezen als de menus waren geopend. dit heb ik werkend gemaakt door de menu sections een aria-label op true te zetten. dit zorgde ervoor dat de menus verborgen waren voor de screenreaders.  dmv js kon ik vervolgens ervoor zorgen dat als een menu werd geopend, de aria-label op false kwam te staan. zo werd de menu zichtbaar voor de screen readers.
 
 </details>
 
